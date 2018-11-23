@@ -36,10 +36,10 @@ public class Panels {
         self.configuration = config
         self.containerView = view ?? parentViewController?.view
         self.panel = panel
-        self.parentViewController?.addContainer(container: panel)
         guard let container = containerView else {
             fatalError("No parent view available")
         }
+      self.parentViewController?.addContainer(container: panel, view: container)
 
         panelHeightConstraint = self.addChildToContainer(parent: container,
                                                          child: panel.view,

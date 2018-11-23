@@ -24,9 +24,9 @@ internal extension UIViewController {
 
 internal extension UIViewController {
 
-    func addContainer(container: UIViewController) {
+    func addContainer(container: UIViewController, view: UIView) {
         self.addChild(container)
-        self.view.addSubview(container.view)
+        view.addSubview(container.view)
         container.didMove(toParent: self)
     }
 
